@@ -1,0 +1,118 @@
+//Container widths
+$sm-container-width: 728px;
+$smm-container-width: 1024px;
+// $md-container-width: 1280px;
+$md-container-width: 1024px;
+$lg-container-width: 1240px;
+$lg-xl-container-width: 1290px;
+$lg-container-width-sidebar: 986px;
+$lg-xl-container-width-sidebar: 1026px;
+$desktop-xl-width: 1300px;
+// $desktop-width: 1280px;
+//Where desktop begins
+$desktop-widths: "(min-width: 1281px)";
+//$desktop-widths: '(min-width: 1250px)';
+$mobilemini: "(max-width: 767px)";
+// $mobile: '(max-width: 639px)';
+$lgds: "(min-width: 1024px)";
+$lgdsf: "(min-width: 1681px)";
+$mobileonly: "(max-width: 768px)";
+$desk: "(max-width: 1199px)";
+$desklg: "(min-width: 1200px)";
+// Max width where tablet is still affect finishes
+$mobtabonly: "(max-width: 1279px)";
+$mobtab: "(max-width: 576px)";
+$tabonly: "(min-width:768px) and (max-width: 1200px)";
+$porttab: "(min-width:768px) and (max-width: 800px)";
+$landtab: "(min-width:992px) and (max-width: 1199px)";
+$tabdeskonly: "(max-width: 991px)";
+$tabdesk991: "(min-width: 992px)";
+//where desktop begins
+// $deskonly: '(min-width: 1250px) and (max-width:1299px)';
+$deskonly: "(max-width: 1199px)";
+
+@mixin adaptive($breakpoint) {
+  @media #{$breakpoint} {
+    @content;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    // @media (max-width: 1200px) {
+    @media #{$mobtabonly} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobilemini {
+    @media #{$mobilemini} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media #{$mobileonly} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tabonly {
+    @media #{$tabonly} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == porttab {
+    @media #{$porttab} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == landtab {
+    @media #{$landtab} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tabdesk {
+    @media #{$tabdeskonly} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media #{$deskonly} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == deskonly {
+    @media #{$deskonly} {
+      @content;
+    }
+  }
+  @if $breakpoint == tabdesk991 {
+    @media #{$tabdesk991} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lgdsf {
+    @media #{$lgdsf} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-widths {
+    @media #{$desktop-widths} {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobtab {
+    @media #{$mobtab} {
+      @content;
+    }
+  }
+}
