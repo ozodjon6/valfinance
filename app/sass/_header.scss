@@ -1,122 +1,149 @@
 .header-page__inner {
-    padding: 26px 0;
-    border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 
-    @include respond(lgdsf) {
-      padding: 20px 0;
-      border-bottom-color: transparent;
-    }
+  @include respond(lgdsf) {
+    padding: 20px 0;
+    border-bottom-color: transparent;
+  }
 }
 .site-logo {
-    display: block;
-    @include respond(tabdesk) {
-      & svg {
-          width: 15rem;
-          height: 2.1rem;
-      }
+  display: block;
+  @include respond(tabdesk) {
+    & svg {
+      width: 15rem;
+      height: 2.1rem;
     }
+  }
+}
+.top-menu__item {
+  padding: 36px 0;
+  position: relative;
+  transition: all 0.3s ease-in;
+
+  &:hover .top-menu__link::after {
+    opacity: 1;
+  }
 }
 .top-menu__item,
 .dropdown-menu__item {
-    margin-right: 5rem;
+  margin-right: 5rem;
 }
 .header-page__content {
-    @include respond(lgdsf) {
-      display: none !important;
-      opacity: 0;
-      visibility: hidden;
-      position: fixed;
-      height: 100vh;
-      background-color: #fff;
-      z-index: 35;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      transform: translate3d(300px,0,0);
-      transition: all .6s ease-in-out;
-    }
+  @include respond(lgdsf) {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 35;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translate3d(300px, 0, 0);
+    transition: all 0.6s ease-in-out;
+  }
 }
 .header-page__content.open {
-    transform: translateZ(0);
-    overflow: auto;
-    opacity: 1;
-    visibility: visible;
-    display: block !important;
+  transform: translateZ(0);
+  overflow: auto;
+  opacity: 1;
+  visibility: visible;
+  display: block !important;
+}
+.top-menu__link::after {
+  content: "";
+  position: absolute;
+  background: #2275c2;
+  height: 3px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in;
 }
 .top-menu__link,
 .dropdown-menu__link {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    display: block;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #000;
 
-        &:hover {
-            color: #2275C2;
-        }
+  &:hover {
+    color: #2275c2;
+  }
 }
 .header-page__dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
 
-    @include respond(lgdsf) {
-      display: none;
-    }
+  @include respond(lgdsf) {
+    display: none;
+  }
 }
 .dropdown-menu__link {
-    & svg {
-        margin-left: 10px;
-    }
+  & svg {
+    margin-left: 10px;
+  }
 }
 .contacts__item:first-child {
-    margin-right: 42px;
+  margin-right: 42px;
 
-    & a {
-        text-decoration: none;
-        margin-left: 10px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        color: #000;
-    }
+  & a {
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+  }
 }
 
 .contacts__btn {
-    background: #2275C2;
-    border-radius: 10px;
-    padding: 1.5rem 4rem;
-    max-width: 215px;
-    width: 100%;
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    display: block;
-    white-space: nowrap;
-    text-decoration: none;
+  background: #2275c2;
+  border-radius: 10px;
+  padding: 1.5rem 4rem;
+  max-width: 215px;
+  width: 100%;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+
+  &:hover {
+      border-color: #1B2E58;
+      color: #1B2E58;
+      background-color: #fff;
+  }
 }
 
 // mobile
 .header-page__hamburger {
-    display: none;
-    @include respond(lgdsf) {
-      display: block;
-    }
+  display: none;
+  @include respond(lgdsf) {
+    display: block;
+  }
 }
 
 .nav-overlay {
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 25;
-    position: absolute;
-    display: none;
-    background-color: rgba(0,0,0,.5);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 25;
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
 }
