@@ -132,19 +132,21 @@ body {
   justify-content: space-between
 }
 .main-page {
-  height: 100vw
+  min-height: 200vw
 }
 .container {
   margin: 0 auto
 }
+.container,
+.container-sm {
+  max-width: 100%
+}
 @media (min-width:1200px) {
   .container {
-    max-width: 1440px;
-    padding-right: 15px;
-    padding-left: 15px
+    max-width: 1440px
   }
 }
-@media (max-width:767px) {
+@media (max-width:991px) {
   .container {
     padding-right: 20px;
     padding-left: 20px
@@ -887,7 +889,16 @@ template {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  border: 1px solid transparent
+  border: 1px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
 }
 .global-btn:hover {
   color: #1b2e58;
@@ -1051,5 +1062,227 @@ template {
   .footer-page__author .item a {
     display: none
   }
+}
+.hero-page {
+  background: -o-linear-gradient(357.05deg,#1b2e58 .13%,#019ab9 100%);
+  background: linear-gradient(92.95deg,#1b2e58 .13%,#019ab9 100%);
+  -webkit-box-shadow: 0 10px 20px -5px rgba(0,0,0,.2);
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,.2);
+  border-radius: 10px;
+  margin-top: 5rem;
+  color: #fff
+}
+@media (max-width:991px) {
+  .hero-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 26px
+  }
+}
+.hero-page .col-12:first-child {
+  padding: 50px
+}
+@media (max-width:991px) {
+  .hero-page .col-12:first-child {
+    padding: 20px 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+}
+.hero-page .col-12:last-child {
+  background: url(../../images/img/hero-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 50%
+}
+@media (max-width:991px) {
+  .hero-page .col-12:last-child {
+    width: 100%;
+    height: 100%;
+    min-height: 300px
+  }
+}
+.hero-page .title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  margin-bottom: 44px
+}
+@media (max-width:991px) {
+  .hero-page .title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 22px
+  }
+}
+.hero-page .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  display: block;
+  margin-bottom: 38px;
+  max-width: 53rem
+}
+@media (max-width:991px) {
+  .hero-page .description {
+    font-size: 14px;
+    margin-bottom: 20px
+  }
+}
+@media (max-width:767px) {
+  .hero-page .hero-page__btns {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
+}
+@media (max-width:767px) {
+  .hero-page .hero-page__btns .global-btn:first-child {
+    margin-bottom: 20px
+  }
+}
+.hero-page .global-btn {
+  background-color: transparent;
+  border: 1px solid #fff
+}
+@media (max-width:767px) {
+  .hero-page .global-btn {
+    width: 100%;
+    margin-right: 0
+  }
+}
+.hero-page .global-btn:hover {
+  color: #293b62;
+  background: #fff
+}
+.services-grid {
+  margin-top: 5rem
+}
+@media (max-width:991px) {
+  .services-grid {
+    margin-top: 2rem
+  }
+}
+.services-grid__heading {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 5rem;
+  text-align: center
+}
+@media (max-width:991px) {
+  .services-grid__heading {
+    margin-bottom: 3rem;
+    font-size: 24px;
+    line-height: 29px
+  }
+}
+.services-grid__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -30px
+}
+@media (max-width:991px) {
+  .services-grid__list {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+}
+.services-grid__list .services-grid__col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+  background: #f6f9fe;
+  border-radius: 10px;
+  padding: 5rem;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-right: 30px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc((100% - 3*30px)/ 3);
+  flex: 0 0 calc((100% - 3*30px)/ 3);
+  max-width: calc((100% - 3*30px)/ 3)
+}
+@media (max-width:991px) {
+  .services-grid__list .services-grid__col {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem
+  }
+}
+.services-grid__list .services-grid__col:hover {
+  background: #2275c2;
+  color: #fff;
+  cursor: pointer
+}
+.services-grid__list .services-grid__col:hover .title {
+  color: #fff
+}
+.services-grid__list .services-grid__col:hover svg {
+  color: #fff
+}
+.services-grid__list .services-grid__col svg {
+  color: #2275c2
+}
+.services-grid__list .services-grid__col .title {
+  color: #1b2e58;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 5rem 0
+}
+.services-grid__list .services-grid__col .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px
+}
+.services-grid__list .services-grid__col .global-btn {
+  background: #fff;
+  -webkit-box-shadow: 0 10px 10px -5px rgba(0,0,0,.1);
+  box-shadow: 0 10px 10px -5px rgba(0,0,0,.1);
+  border-radius: 10px;
+  color: #2275c2;
+  margin-top: 3rem
 }
 /*# sourceMappingURL=app/css/main.css.map */

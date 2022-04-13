@@ -7,8 +7,10 @@
 @import "./base/colors";
 
 /* page */
-@import "./header";
-@import "./footer"
+@import "./page/header";
+@import "./page/footer";
+@import "./page/hero";
+@import "./page/services";
 
 /* default */
 // @import './bootstrap-grid.scss';
