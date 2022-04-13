@@ -1,3 +1,9 @@
+.footer-page__top {
+    @include respond(tabdesk) {
+      flex-direction: column;
+    }
+}
+
 .footer-page__left {
     background: #2275C2;
     border-top-left-radius: 10px;
@@ -22,6 +28,10 @@
             background-repeat: no-repeat;
             height: 490px;
             width: 283px;
+
+            @include respond(tabdesk) {
+              height: 100%;
+            }
         }
 }
 .footer-page__left-content {
@@ -79,24 +89,43 @@
     background: #F6F9FE;
     padding: 34px 20px 34px 110px;
 
+    @include respond(tabdesk) {
+      padding: 20px;
+    }
+
     & .title {
         font-weight: 400;
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 44px;
+
+        @include respond(tabdesk) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
     }
 }
 
 .form-wrap__row {
     display: flex;
     margin-bottom: 20px;
-    flex-wrap: wrap;
+
+    @include respond(tabdesk) {
+      margin-bottom: 1rem;
+    }
 
     & .form-wrap__field {
         border: 1px solid #C4C4C4;
         box-sizing: border-box;
         border-radius: 10px;
         padding: 15px 20px;
+        line-height: 20px;
+
+        @include respond(lgdsf) {
+          width: 100%;
+        }
         & input {
             background-color: transparent;
         }
@@ -109,11 +138,32 @@
     }
     .form-wrap__field:not(:last-child) {
         margin-right: 30px;
+
+        @include respond(lgdsf) {
+          margin-right: 0;
+        }
+
+        @include respond(tabdesk) {
+          margin-bottom: 1rem;
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .form-wrap__row {
+        flex-wrap: wrap;
+    }
+    .form-wrap__field:not(:last-child) {
         margin-bottom: 20px;
     }
 }
 .form-wrap__textarea {
     width: 100%;
+    max-width: 74.5rem;
+
+    @include respond(tabdesk) {
+      max-width: 100%;
+    }
 
     & textarea {
         width: 100%;
@@ -126,6 +176,10 @@
 }
 .form-wrap__checkboxes {
     margin-bottom: 30px;
+    
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+    }
 
     & .form-wrap__checkbox-wrap {
         display: flex;
@@ -143,6 +197,7 @@
         border-radius: 50%;
         border: 1px solid #1B2E58;
         position: relative;
+        flex-shrink: 0;
 
         &::before {
             position: absolute;
@@ -196,6 +251,11 @@
     background: #1B2E58;
     color: #FFFFFF;
     padding: 50px 0 18px;
+
+    @include respond(mobilemini) {
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
 }
 .footer-page__col .title {
     text-transform: uppercase;
@@ -217,6 +277,10 @@
 
 .info {
     max-width: 246px;
+
+    @include respond(mobilemini) {
+      max-width: 100%;
+    }
 }
 
 .info__item {
@@ -224,9 +288,19 @@
     align-items: center;
     color: #FFFFFF;
 
+    @include respond(mobilemini) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     & svg {
         flex-shrink: 0;
         margin-right: 2rem;
+
+        @include respond(mobilemini) {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
     }
 
     & .info__text {
@@ -247,8 +321,23 @@
 
 .social {
 
+    @include respond(mobilemini) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
     & .social__item {
         margin-bottom: 3rem;
+
+        @include respond(mobilemini) {
+          margin-bottom: 0;
+        }
+
+    & .social__link {
+        display: block;
+    }
     }
 }
 
