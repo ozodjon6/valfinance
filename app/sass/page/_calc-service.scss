@@ -17,7 +17,7 @@
   }
 
   & .col-12:first-child {
-    padding: 5rem 3rem 5rem 0;
+    padding: 5rem 3rem;
     background: #F6F9FE;
     position: relative;
 
@@ -187,7 +187,7 @@
       align-items: flex-start;
       margin-bottom: 0;
 
-      & .form-wrap__checkbox-wrap {
+      & .form-wrap__checkbox-wrap:not(:last-child) {
         margin-right: 0;
         margin-bottom: 3rem;
       }

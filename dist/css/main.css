@@ -1309,7 +1309,7 @@ template {
   }
 }
 .calc-services .col-12:first-child {
-  padding: 5rem 3rem 5rem 0;
+  padding: 5rem 3rem;
   background: #f6f9fe;
   position: relative
 }
@@ -1488,7 +1488,7 @@ template {
   align-items: flex-start;
   margin-bottom: 0
 }
-.calc-form__wrap .calc-form__content .form-wrap__checkboxes .form-wrap__checkbox-wrap {
+.calc-form__wrap .calc-form__content .form-wrap__checkboxes .form-wrap__checkbox-wrap:not(:last-child) {
   margin-right: 0;
   margin-bottom: 3rem
 }
