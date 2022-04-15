@@ -1309,7 +1309,7 @@ template {
   }
 }
 .calc-services .col-12:first-child {
-  padding: 5rem 3rem;
+  padding: 3rem 3rem 3rem 0;
   background: #f6f9fe;
   position: relative
 }
