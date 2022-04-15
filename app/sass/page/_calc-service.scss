@@ -17,7 +17,7 @@
   }
 
   & .col-12:first-child {
-    padding: 4.7rem 3rem;
+    padding: 4.7rem 3rem 4.7rem 0;
     background: #F6F9FE;
     position: relative;
 
@@ -37,7 +37,7 @@
     }
   }
   & .col-12:last-child {
-    padding: 5rem 3rem;
+    padding: 5rem;
     // background: linear-gradient(63.16deg, #1A548A 0%, rgba(34, 117, 194, 0.95) 100%);
     // border-top-left-radius: 10px;
     // border-bottom-left-radius: 10px;
