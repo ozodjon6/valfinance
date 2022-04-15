@@ -1,0 +1,54 @@
+.about__heading {
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 3rem;
+}
+
+.proffer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -3rem;
+    margin-bottom: -3rem;
+
+    @include respond(tabdesk) {
+      margin-right: 0;
+    }
+    & .proffer__item {
+        padding: 46px 64px;
+        border: 1px solid #DCDCDC;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        flex: 0 0 calc((100% - 2*30px) / 2);
+        max-width: calc((100% - 2*30px) / 2);
+
+        @include respond(tabdesk) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+
+        & .title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 2rem;
+        }
+
+        & .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+
+            & strong {
+                display: block;
+                color: #1B2E58;
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,94 @@
+.tender__heading {
+    margin-bottom: 5rem;
+
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+    }
+    .title {
+        margin: auto;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        margin-bottom: 5rem;
+
+        @include respond(tabdesk) {
+          margin-bottom: 2rem;
+        }
+    }
+}
+.info-list {
+    display: flex;
+    align-items: center;
+    margin-right: -3rem;
+
+    & .info-list__item {
+        text-align: left;
+        font-weight: 400;
+        font-size: 16px;
+        background: #F6F9FE;
+        border-radius: 10px;
+        padding: 16px 12px;
+        margin-right: 3rem;
+        min-height: 72px;
+        line-height: 20px;
+        flex: 0 0 calc((100% - 4*30px) / 4);
+        max-width: calc((100% - 4*30px) / 4);
+        transition: all 0.3s;
+    }
+    & .info-list__item.active {
+        background: #1B2E58;
+        color: #FFFFFF;
+    }
+}
+
+.tender__body {
+    align-items: flex-start;
+    & .col-12:first-child {
+        background-image: url(../../images/img/happy-girl.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        border-radius: 10px;
+        height: 386px;
+    }
+    & .col-12:last-child {
+        padding-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        & span {
+            font-weight: 400;
+            font-size: 16px;
+            display: block;
+            line-height: 26px;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            position: relative;
+        }
+        & span:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #2275C2;
+            width: 20%;
+            height: 2px;
+        }
+
+        & .tender__body-text {
+            margin-bottom: 5rem;
+        }
+    }
+
+    & .tender__body-btns {
+        display: flex;
+        align-items: center;
+
+        & .global-btn:first-child {
+            margin-right: 3rem;
+        }
+    }
+}

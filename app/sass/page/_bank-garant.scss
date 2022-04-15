@@ -1,0 +1,93 @@
+.section-page {
+    margin: 5rem 0;
+    display: block;
+
+    @include respond(tabdesk) {
+      margin: 2rem 0;
+    }
+}
+
+.bank-garant__heading {
+    margin: auto;
+    text-align: center;
+    max-width: 71rem;
+    margin-bottom: 3.5rem;
+
+    & .title {
+        margin-bottom: 2rem;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    & .description {
+        color: #767676;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.bank-garant__list {
+    display: flex;
+    margin-right: -3rem;
+}
+
+.bank-garant__item {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 25px 4rem;
+    flex: 0 0 calc((100% - 3*30px) / 3);
+    max-width: calc((100% - 3*30px) / 3);
+    margin-right: 3rem;
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        background: #1B2E58;
+    }
+    &:hover .description{
+        color: #FFFFFF;
+    }
+    &:hover .bank-garant__icon{
+        background: #2275C2;
+    }
+
+    & .bank-garant__icon {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+        background: #1B2E58;
+        margin-right: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond(tabdesk) {
+          margin-right: 0;
+          margin-bottom: 2rem;
+        }
+
+        & svg {
+            flex-shrink: 0;
+        }
+    }
+
+    & .bank-garant__content {
+        & strong {
+            display: block;
+            color: #2275C2;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 1rem;
+        }
+        & .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}
