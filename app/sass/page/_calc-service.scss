@@ -1,0 +1,227 @@
+.calc-services {
+  position: relative;
+  display: flex;
+  margin-top: 5rem;
+
+  @include respond(tabdesk) {
+    margin-top: 2rem;
+  }
+
+  & .container {
+    display: flex;
+    align-items: flex-start;
+
+    @include respond(tabdesk) {
+      flex-wrap: wrap;
+    }
+  }
+
+  & .col-12:first-child {
+    padding: 4.7rem 3rem;
+    background: #F6F9FE;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -50%;
+      top: 0;
+      background: #F6F9FE;
+      width: 50%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    @include respond(tabdesk) {
+      padding: 0;
+    }
+  }
+  & .col-12:last-child {
+    padding: 5rem 3rem;
+    // background: linear-gradient(63.16deg, #1A548A 0%, rgba(34, 117, 194, 0.95) 100%);
+    // border-top-left-radius: 10px;
+    // border-bottom-left-radius: 10px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(63.16deg, #1A548A 0%, rgba(34, 117, 194, 0.95) 100%);
+      border-radius: 10px;
+      width: 150%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    @include respond(tabdesk) {
+      padding: 3rem 0;
+    }
+  }
+
+}
+
+.calc-form {
+  @include respond(tabdesk) {
+    padding-top: 3rem;
+  }
+}
+
+.calc-form__wrap:last-child {
+
+  & .form-wrap__checkboxes {
+    margin-bottom: 0;
+  }
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 34, 51, 0.1);
+  box-shadow: 2px 4px 10px 0 rgba(0, 34, 51, 0.05),
+    2px 4px 10px 0 rgba(0, 34, 51, 0.05);
+  border-radius: 0.15rem;
+}
+
+/* Tabs Card */
+.calc-services__tab {
+  & .title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 5rem;
+
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  & .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.tab-list {
+  margin-bottom: 93px;
+  & .tab-list__item {
+    padding-bottom: 4rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    align-items: center;
+    color: #adadad;
+
+    & svg {
+      margin-right: 2rem;
+    }
+    & span {
+      font-weight: 600;
+      font-size: 24px;
+      display: block;
+      line-height: 29px;
+    }
+  }
+  & .global-btn {
+    max-width: 215px;
+    white-space: nowrap;
+  }
+}
+
+.tab-list__item.active {
+  & svg,
+  & span {
+    color: #2275c2;
+  }
+  border-color: #2275c2;
+}
+
+/* calc-form__wrap  */
+
+.calc-form__wrap {
+  color: #ffffff;
+
+  @include respond(tabdesk) {
+    margin-bottom: 2rem;
+  }
+
+  & .calc-form__field:first-child {
+    margin-right: 7rem;
+  }
+
+  & label,
+  & strong {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    display: block;
+  }
+  & svg {
+    margin-left: 1rem;
+  }
+
+  & input {
+    border-radius: 10px;
+    height: 5rem;
+    padding: 10px 20px;
+    max-width: 275px;
+    width: 100%;
+
+    ::placeholder {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 29px;
+      color: #a7a7a7;
+    }
+  }
+
+  .calc-form__content {
+    & .form-wrap__checkboxes {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 0;
+
+      & .form-wrap__checkbox-wrap {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.calc-form__wrap:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.calc-form__field {
+  & label {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  & .form-wrap__checkboxes .form-wrap__checkbox-mask {
+    border: 1px solid #ffffff;
+
+    &::before {
+      background: #ffffff;
+    }
+  }
+
+  & .form-wrap__checkboxes {
+    display: flex;
+    align-items: center;
+
+    & .form-wrap__checkbox-wrap {
+      margin-bottom: 0;
+      margin-right: 5rem;
+    }
+  }
+}
