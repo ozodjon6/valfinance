@@ -1679,7 +1679,7 @@ template {
   align-items: flex-start
 }
 .tender__body .col-12:first-child {
-  background-image: url(../../images/img/happy-girl.png);
+  background-image: url(../images/img/happy-girl.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left center;
