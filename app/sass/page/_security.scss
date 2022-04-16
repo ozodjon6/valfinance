@@ -1,0 +1,74 @@
+.router {
+    margin-top: 3.3rem;
+    margin-bottom: 5rem;
+
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+    }
+
+    & span, & i {
+        color: #939393;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    & span.active {
+        color: #000000;
+    }
+}
+
+.special-service__list {
+    margin-right: -3rem;
+    display: flex;
+    flex-wrap: wrap;
+    & .special-service__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        background: #F6F9FE;
+        border-radius: 10px;
+        padding: 3rem;
+        margin-right: 3rem;
+        min-height: 269px;
+        flex: 0 0 calc((100% - 2*30px) / 2);
+        max-width: calc((100% - 2*30px) / 2);
+
+        & svg {
+            color: #2275C2;
+            margin-right: 3rem;
+        }
+    }
+}
+
+.special-service__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+
+    & .title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: #1B2E58;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+    & .description {
+        max-width: 31rem;
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    & .global-btn {
+        max-width: 215px;
+        box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.1);
+        background: #FFFFFF;
+        color: #2275C2;
+    }
+}

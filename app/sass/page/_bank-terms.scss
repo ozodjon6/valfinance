@@ -1,0 +1,98 @@
+.global-heading {
+    margin-bottom: 5rem;
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+    }
+    & .title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.bank-terms__content:not(:last-child) {
+    margin-bottom: 5rem;
+
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+    }
+}
+
+.bank-service {
+    margin-right: -3rem;
+    margin-bottom: -3rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(tabdesk) {
+        margin-right: -2rem;
+        margin-bottom: -2rem;
+    }
+
+    & .bank-service__item {
+        background: #F6F9FE;
+        border-radius: 10px;
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 25px;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        padding-left: 7rem;
+        flex: 0 0 calc((100% - 3*30px) / 3);
+        max-width: calc((100% - 3*30px) / 3);
+
+        @include respond(tabdesk) {
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            flex: 0 0 calc((100% - 2*30px) / 2);
+            max-width: calc((100% - 2*30px) / 2);
+        }
+
+        & svg {
+            margin-right: 3rem;
+
+            @include respond(tabdesk) {
+              margin-right: 2rem;
+            }
+        }
+    }
+}
+
+/* bank-rights */
+
+.bank-rights {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-right: -3rem;
+    margin-bottom: -3rem;
+   & .bank-rights__item {
+       display: flex;
+       align-items: flex-start;
+       margin-right: 3rem;
+       margin-bottom: 3rem;
+       flex: 0 0 calc((100% - 3*30px) / 3);
+       max-width: calc((100% - 3*30px) / 3);
+
+       @include respond(tabdesk) {
+        flex: 0 0 100%;
+        margin-right: 0;
+        max-width: 100%;
+       }
+
+        & svg {
+            margin-right: 3rem;
+            flex-shrink: 0;
+        }
+        .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+}

@@ -91,3 +91,97 @@
         }
     }
 }
+
+/* get-garant */
+
+.get-garant {
+    background: linear-gradient(63.16deg, #1A548A 0%, rgba(34, 117, 194, 0.95) 100%);
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 5rem 0;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-right: -3rem;
+    margin-bottom: 5rem;
+    & .step__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-right: 3rem;
+        flex: 0 0 calc((100% - 4*30px) / 4);
+        max-width: calc((100% - 4*30px) / 4);
+        & .step__number {
+            width: 5rem;
+            height: 5rem;
+            background: #FFFFFF;
+            border-radius: 10px;    
+            color: #2275C2;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        & .title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 1rem;
+        }
+
+        & .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+.step__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    border: 1px dashed #FFFFFF;
+    width: 50%;
+    top: 25px;
+    right: -30%;
+}
+
+.get-garant__body {
+
+    & .global-btn {
+        max-width: 215px;
+        margin: auto;
+        white-space: nowrap;
+        background: #FFFFFF;
+        color: #2275C2;
+
+        &:hover {
+            background: #2275C2;
+            border-color: transparent;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.get-garant__action {
+    color: #6CABE7;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 5rem;
+    text-align: center;
+
+    @include respond(tabdesk) {
+      margin-bottom: 2rem;
+    }
+}
