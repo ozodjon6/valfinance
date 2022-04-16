@@ -35,9 +35,24 @@
         flex: 0 0 calc((100% - 2*30px) / 2);
         max-width: calc((100% - 2*30px) / 2);
 
+        @include respond(tabdesk) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-right: 0;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
         & svg {
             color: #2275C2;
             margin-right: 3rem;
+            flex-shrink: 0;
+
+            @include respond(tabdesk) {
+              margin-right: 0;
+              margin-bottom: 3rem;
+            }
         }
     }
 }
@@ -47,7 +62,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    text-align: left;
     height: 100%;
+
+    @include respond(tabdesk) {
+      align-items: center;
+      text-align: center;
+    }
 
     & .title {
         font-weight: 600;
@@ -55,15 +76,15 @@
         line-height: 29px;
         color: #1B2E58;
         margin-bottom: 2rem;
-        text-align: left;
+        
     }
     & .description {
         max-width: 31rem;
         display: block;
-        text-align: left;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+        margin-bottom: 3rem;
     }
     & .global-btn {
         max-width: 215px;

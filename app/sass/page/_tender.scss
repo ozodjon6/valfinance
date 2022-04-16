@@ -92,3 +92,79 @@
         }
     }
 }
+
+/* tender-tab */
+.section-page.tender-tab {
+    margin-bottom: 10rem;
+}
+
+.tender-tab {
+    & .global-heading {
+        margin-bottom: 5rem;
+
+        @include respond(tabdesk) {
+          margin-bottom: 2rem;
+        }
+        & .title {
+            margin-bottom: 3rem;
+        }
+
+        & .subtitle {
+            color: #878787;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+        }
+    }
+}
+
+.tender-tab__list {
+    display: flex;
+
+    & .tender-tab__col:first-child {
+        border: 1px solid #E6E6E6;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 47px 87px;
+        margin-right: 3rem;
+
+        & .tender-tab__item {
+            color: #767676;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+        }
+        & .tender-tab__item.active {
+            color: #000000;
+        }
+        & .tender-tab__item:not(:last-child) {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        & .tender-tab__item.active:not(:last-child) {
+            border-color: #2275C2;
+        }
+    }
+}
+
+.tender-tab__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+
+    & p:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    & .tender-tab__info {
+        padding-left: 20px;
+        margin-left: 2rem;
+        margin-bottom: 3rem;
+
+        & .tender-tab__info-item {
+            list-style-type: disc;
+        }
+    }
+}
