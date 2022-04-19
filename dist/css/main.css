@@ -2281,7 +2281,14 @@ template {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 calc((100% - 4*30px)/ 4);
   flex: 0 0 calc((100% - 4*30px)/ 4);
-  max-width: calc((100% - 4*30px)/ 4)
+  max-width: calc((100% - 4*30px)/ 4);
+  padding-left: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+.bank-service.bank-service_debt .bank-service__item .bank-service__content {
+  max-width: 166px
 }
 .bank-rights {
   display: -webkit-box;
