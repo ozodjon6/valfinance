@@ -56,6 +56,21 @@
       z-index: -1;
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -10%;
+      background-image: url(../images/img/calc-woman.png);
+      background-repeat: no-repeat;
+      width: 411px;
+      height: 50rem;
+
+      @include respond(desktop) {
+        display: none;
+      }
+    }
+
     @include respond(tabdesk) {
       padding: 3rem 0;
     }

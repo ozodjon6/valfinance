@@ -1176,6 +1176,9 @@ template {
 .hero-page.hero-page_garant .col-12:last-child {
   background-image: url(../images/img/hero-2.png)
 }
+.hero-page_debt .col-12:last-child {
+  background-image: url(../images/img/hero-3.png)
+}
 .services-grid {
   margin-top: 5rem
 }
@@ -1347,6 +1350,21 @@ template {
   width: 150%;
   height: 100%;
   z-index: -1
+}
+.calc-services .col-12:last-child::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  background-image: url(../images/img/calc-woman.png);
+  background-repeat: no-repeat;
+  width: 411px;
+  height: 50rem
+}
+@media (max-width:1199px) {
+  .calc-services .col-12:last-child::before {
+    display: none
+  }
 }
 @media (max-width:991px) {
   .calc-services .col-12:last-child {
@@ -1600,7 +1618,9 @@ template {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
 }
 @media (max-width:991px) {
   .bank-garant__item .bank-garant__icon {
@@ -2248,12 +2268,20 @@ template {
   }
 }
 .bank-service .bank-service__item svg {
-  margin-right: 3rem
+  margin-right: 3rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
 }
 @media (max-width:991px) {
   .bank-service .bank-service__item svg {
     margin-right: 2rem
   }
+}
+.bank-service.bank-service_debt .bank-service__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc((100% - 4*30px)/ 4);
+  flex: 0 0 calc((100% - 4*30px)/ 4);
+  max-width: calc((100% - 4*30px)/ 4)
 }
 .bank-rights {
   display: -webkit-box;

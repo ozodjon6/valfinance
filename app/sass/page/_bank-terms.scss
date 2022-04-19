@@ -55,11 +55,20 @@
 
         & svg {
             margin-right: 3rem;
+            flex-shrink: 0;
 
             @include respond(tabdesk) {
               margin-right: 2rem;
             }
         }
+    }
+}
+
+.bank-service.bank-service_debt {
+    
+    & .bank-service__item {
+        flex: 0 0 calc((100% - 4*30px) / 4);
+        max-width: calc((100% - 4*30px) / 4);
     }
 }
 

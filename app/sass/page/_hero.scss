@@ -101,3 +101,9 @@
     background-image: url(../images/img/hero-2.png);
   }
 }
+
+.hero-page_debt {
+  & .col-12:last-child {
+    background-image: url(../images/img/hero-3.png);
+  }
+}
