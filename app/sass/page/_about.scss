@@ -52,3 +52,26 @@
         }
     }
 }
+
+.proffer.proffer_contract {
+    & .title {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background: #2275C2;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & .proffer__item {
+        padding: 20px 30px;
+    }
+}
+
+.section-page.contract {
+    & .title {
+        max-width: 70rem;
+    }
+}

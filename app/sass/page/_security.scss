@@ -18,6 +18,14 @@
     }
 }
 
+.special-service {
+    & .global-heading .title {
+        max-width: 90rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
 .special-service__list {
     margin-right: -3rem;
     display: flex;

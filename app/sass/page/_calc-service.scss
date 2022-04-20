@@ -16,10 +16,18 @@
     }
   }
 
+  & .col-12 {
+    height: 50vw;
+  }
+
   & .col-12:first-child {
     padding: 5rem 3rem 5rem 0;
     background: #F6F9FE;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     &::before {
       content: "";
@@ -120,6 +128,11 @@
     line-height: 26px;
   }
 }
+.calc-services__tab_debt {
+  & .description {
+    color: #878787;
+  }
+}
 
 .tab-list {
   margin-bottom: 93px;
@@ -147,6 +160,11 @@
   }
 }
 
+.tab-list.tab-list_debt {
+  & .tab-list__item {
+    border-bottom: none;
+  }
+}
 .tab-list__item.active {
   & svg,
   & span {
