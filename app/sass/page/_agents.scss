@@ -1,0 +1,17 @@
+.post-info {
+    & .global-heading {
+        margin-bottom: 2rem;
+        & .title {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            max-width: 90rem;
+        }
+    }
+
+    & .post-info__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

@@ -162,3 +162,23 @@
         }
     }
 }
+
+.bank-rights.bank-rights_agents {
+    & .bank-rights__item {
+        height: 337px;
+        border: 1px solid #E6E6E6;
+        padding-right: 2rem;
+        padding-left: 2rem;
+
+        & .title {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.bank-rights.bank-rights_agents-info {
+    & .bank-rights__item {
+        flex: 0 0 calc((100% - 3*30px) / 3);
+        max-width: calc((100% - 3*30px) / 3);
+    }
+}

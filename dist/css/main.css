@@ -1230,6 +1230,9 @@ template {
   text-align: center;
   margin-bottom: 3rem
 }
+.hero-page_agents .col-12:last-child {
+  background-image: url(../images/img/hero-6.png)
+}
 .services-grid {
   margin-top: 5rem
 }
@@ -2092,6 +2095,25 @@ template {
 .section-page.contract .title {
   max-width: 70rem
 }
+.post-info__list .post-info__item .title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 2rem
+}
+.post-info__list .post-info__item .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px
+}
+.post-info__list .post-info__item .description i,
+.post-info__list .post-info__item .description p {
+  margin-bottom: 12px;
+  display: block
+}
+.post-info__list .post-info__item:first-child {
+  margin-bottom: 36px
+}
 .section-page.blog-page {
   background: #f6f9fe;
   border-radius: 10px;
@@ -2503,6 +2525,21 @@ template {
   color: #2275c2;
   margin-bottom: 2rem
 }
+.bank-rights.bank-rights_agents .bank-rights__item {
+  height: 337px;
+  border: 1px solid #e6e6e6;
+  padding-right: 2rem;
+  padding-left: 2rem
+}
+.bank-rights.bank-rights_agents .bank-rights__item .title {
+  margin-bottom: 1rem
+}
+.bank-rights.bank-rights_agents-info .bank-rights__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 calc((100% - 3*30px)/ 3);
+  flex: 0 0 calc((100% - 3*30px)/ 3);
+  max-width: calc((100% - 3*30px)/ 3)
+}
 .advent-page__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2571,5 +2608,19 @@ template {
   -ms-flex-align: center;
   align-items: center;
   padding: 0 2rem
+}
+.post-info .global-heading {
+  margin-bottom: 2rem
+}
+.post-info .global-heading .title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 90rem
+}
+.post-info .post-info__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px
 }
 /*# sourceMappingURL=app/css/main.css.map */
