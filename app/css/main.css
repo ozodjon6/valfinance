@@ -2824,4 +2824,48 @@ template {
 .blue-page__form input::placeholder {
   color: #fff
 }
+.doc-list .doc-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 0 1px #e6e6e6;
+  box-shadow: inset 0 0 0 1px #e6e6e6;
+  padding: 13px 20px 13px 30px
+}
+.doc-list .doc-list__item .doc-list__content {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.doc-list .doc-list__item .doc-list__content svg {
+  margin-right: 2rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+.doc-list .doc-list__item .doc-list__content .description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px
+}
+.doc-list .doc-list__item .doc-list__download {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  color: #2275c2;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px
+}
+.doc-list .doc-list__item:not(:last-child) {
+  margin-bottom: 2rem
+}
 /*# sourceMappingURL=app/css/main.css.map */
