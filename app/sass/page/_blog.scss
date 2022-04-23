@@ -37,10 +37,11 @@
     align-items: center;
     margin-right: -3rem;
     margin-bottom: -3rem;
-
+    
     @include respond(tabdesk) {
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
+
     & .post-list__item {
         background: #FFFFFF;
         box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
@@ -80,6 +81,58 @@
                 display: block;
                 text-decoration: underline;
             }
+        }
+    }
+}
+
+// post-blog .carousel-item
+
+.post-list__carusel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+  }
+
+.blog__body {
+    & .swiper-pagination {
+        position: unset;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+
+        & .swiper-pagination-bullet {
+            margin-right: 4rem;
+            color: #000000;
+            background: transparent;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & .swiper-pagination-bullet-active {
+            background: #2275C2;
+            border-radius: 5px;
+            color: #fff;
         }
     }
 }

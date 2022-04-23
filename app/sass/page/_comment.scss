@@ -1,0 +1,39 @@
+.comment-list__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    & .comment-list__item {
+        background: #C4C4C4;
+        border-radius: 10px;
+        height: 338px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    & .swiper-scrollbar {
+        max-width: 70rem;
+        width: 100%;
+        margin-top: 5rem;
+        margin-right: auto;
+        margin-left: auto;
+        background: #DCDCDC;
+        height: 5px;
+        border-radius: 10px;
+        position: relative;
+
+        & .swiper-scrollbar-drag {
+            background: #2275C2;
+            width: 92px !important;
+        }
+    }
+}
