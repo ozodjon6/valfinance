@@ -3,6 +3,10 @@
     border-radius: 10px;
     padding: 3rem 0 6rem;
     margin-bottom: 0rem;
+
+    @include respond(mobilemini) {
+      padding: 2rem 0;
+    }
 }
 
 .blog__heading {
@@ -12,6 +16,12 @@
     margin: auto;
     text-align: center;
     margin-bottom: 3rem;
+
+    @include respond(mobilemini) {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 1rem;
+    }
 }
 
 .blog__body {
@@ -42,6 +52,11 @@
         flex-wrap: wrap;
     }
 
+    @include respond(mobilemini) {
+      margin-right: 0;
+      margin-bottom: -2rem;
+    }
+
     & .post-list__item {
         background: #FFFFFF;
         box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
@@ -54,6 +69,12 @@
         @include respond(tabdesk) {
             flex: 0 0 calc((100% - 2*30px) / 2);
             max-width: calc((100% - 2*30px) / 2);
+        }
+
+        @include respond(mobilemini) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 2rem;
         }
 
         & img {

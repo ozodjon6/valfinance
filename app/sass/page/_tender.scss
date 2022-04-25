@@ -15,12 +15,23 @@
         @include respond(tabdesk) {
           margin-bottom: 2rem;
         }
+
+        @include respond(mobilemini) {
+            font-size: 24px;
+            line-height: 29px;
+        }
     }
 }
 .info-list {
     display: flex;
     align-items: center;
     margin-right: -3rem;
+
+    @include respond(tabdesk) {
+      flex-wrap: wrap;
+      margin-right: 0;
+      margin-bottom: -2rem;
+    }
 
     & .info-list__item {
         display: flex;
@@ -38,6 +49,17 @@
         flex: 0 0 calc((100% - 4*30px) / 4);
         max-width: calc((100% - 4*30px) / 4);
         transition: all 0.3s;
+
+        @include respond(desktop) {
+            flex: 0 0 calc((100% - 2*30px) / 2);
+            max-width: calc((100% - 2*30px) / 2);
+        }
+
+        @include respond(tabdesk) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 2rem;
+        }
     }
     & .info-list__item.active {
         background: #1B2E58;
@@ -47,6 +69,10 @@
 
 .tender__body {
     align-items: flex-start;
+
+    @include respond(tabdesk) {
+      flex-wrap: wrap;
+    }
     & .col-12:first-child {
         background-image: url(../images/img/happy-girl.png);
         background-repeat: no-repeat;
@@ -54,6 +80,10 @@
         background-position: left center;
         border-radius: 10px;
         height: 386px;
+
+        @include respond(tabdesk) {
+          height: 270px;
+        }
     }
     & .col-12:last-child {
         padding-left: 3rem;
@@ -61,6 +91,11 @@
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+
+        @include respond(tabdesk) {
+          padding-left: 0;
+          text-align: center;
+        }
 
         & span {
             font-weight: 400;
@@ -70,6 +105,11 @@
             margin-bottom: 3rem;
             padding-bottom: 3rem;
             position: relative;
+
+            @include respond(tabdesk) {
+              margin-bottom: 1rem;
+              padding-bottom: 1rem;
+            }
         }
         & span:not(:last-child)::after {
             content: '';
@@ -79,6 +119,13 @@
             background: #2275C2;
             width: 20%;
             height: 2px;
+
+            @include respond(tabdesk) {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%); 
+                top: 100%;           
+            }
         }
 
         & .tender__body-text {
@@ -90,8 +137,21 @@
         display: flex;
         align-items: center;
 
+        @include respond(tabdesk) {
+          flex-wrap: wrap;
+
+          & .global-btn {
+              margin-bottom: 2rem;
+              width: 100%;
+          }
+        }
+
         & .global-btn:first-child {
             margin-right: 3rem;
+
+            @include respond(tabdesk) {
+              margin-right: 0;
+            }
         }
     }
 }

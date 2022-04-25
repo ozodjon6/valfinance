@@ -13,11 +13,21 @@
     max-width: 71rem;
     margin-bottom: 3.5rem;
 
+    @include respond(mobilemini) {
+      margin-bottom: 2rem;
+    }
+
     & .title {
         margin-bottom: 2rem;
         font-weight: 600;
         font-size: 36px;
         line-height: 44px;
+
+        @include respond(mobilemini) {
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 1rem;
+        }
     }
 
     & .description {
@@ -25,12 +35,21 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 26px;
+
+        @include respond(mobilemini) {
+            font-size: 14px;
+        }
     }
 }
 
 .bank-garant__list {
     display: flex;
     margin-right: -3rem;
+
+    @include respond(desktop) {
+      flex-wrap: wrap;
+      margin-bottom: -3rem;
+    }
 }
 
 .bank-garant__item {
@@ -44,6 +63,26 @@
     display: flex;
     align-items: flex-start;
     transition: all 0.3s;
+
+    @include respond(desktop) {
+        flex: 0 0 calc((100% - 2*30px) / 2);
+        max-width: calc((100% - 2*30px) / 2);
+        margin-bottom: 3rem;
+    }
+
+    @include respond(tabdesk) {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    @include respond(mobilemini) {
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: unset;
+      margin-bottom: 2rem;
+    }
 
     &:hover {
         cursor: pointer;
@@ -72,8 +111,18 @@
           margin-bottom: 2rem;
         }
 
+        @include respond(mobilemini) {
+          width: 6rem;
+          height: 6rem;
+        }
+
         & svg {
             flex-shrink: 0;
+
+            @include respond(mobilemini) {
+              width: 26px;
+              height: 26px;
+            }
         }
     }
 

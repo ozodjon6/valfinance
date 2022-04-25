@@ -13,11 +13,17 @@
 
     @include respond(tabdesk) {
       flex-wrap: wrap;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
   & .col-12 {
     height: 50vw;
+
+    @include respond(tabdesk) {
+      height: auto;
+    }
   }
 
   & .col-12:first-child {
@@ -38,10 +44,14 @@
       width: 50%;
       height: 100%;
       z-index: -1;
+
+      @include respond(tabdesk) {
+        display: none;
+      }
     }
 
     @include respond(tabdesk) {
-      padding: 0;
+      padding: 20px;
     }
   }
   & .col-12:last-child {
@@ -50,6 +60,11 @@
     // border-top-left-radius: 10px;
     // border-bottom-left-radius: 10px;
     position: relative;
+
+    @include respond(tabdesk) {
+      background: linear-gradient(63.16deg, #1A548A 0%, rgba(34, 117, 194, 0.95) 100%);
+      border-radius: 10px;
+    }
 
     &::after {
       content: "";
@@ -62,6 +77,10 @@
       width: 150%;
       height: 100%;
       z-index: -1;
+
+      @include respond(tabdesk) {
+        display: none;
+      }
     }
 
     &::before {
@@ -80,7 +99,11 @@
     }
 
     @include respond(tabdesk) {
-      padding: 3rem 0;
+      padding: 3rem;
+    }
+
+    @include respond(mobilemini) {
+      padding: 2rem;
     }
   }
 
@@ -88,7 +111,7 @@
 
 .calc-form {
   @include respond(tabdesk) {
-    padding-top: 3rem;
+    padding-top: 0;
   }
 }
 
@@ -136,6 +159,10 @@
 
 .tab-list {
   margin-bottom: 93px;
+
+  @include respond(tabdesk) {
+    margin-bottom: 2rem;
+  }
   & .tab-list__item {
     padding-bottom: 4rem;
     margin-bottom: 4rem;
@@ -157,6 +184,10 @@
   & .global-btn {
     max-width: 215px;
     white-space: nowrap;
+
+    @include respond(mobilemini) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -182,8 +213,20 @@
     margin-bottom: 2rem;
   }
 
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
   & .calc-form__field:first-child {
     margin-right: 7rem;
+
+    @include respond(phone) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
   }
 
   & label,
@@ -197,6 +240,10 @@
   }
   & svg {
     margin-left: 1rem;
+
+    @include respond(mobilemini) {
+      display: none;
+    }
   }
 
   & input {
@@ -205,6 +252,10 @@
     padding: 10px 20px;
     max-width: 275px;
     width: 100%;
+
+    @include respond(mobilemini) {
+      max-width: 100%;
+    }
 
     ::placeholder {
       font-weight: 500;
@@ -215,10 +266,18 @@
   }
 
   .calc-form__content {
+
+    @include respond(mobilemini) {
+      flex-direction: column;
+    }
     & .form-wrap__checkboxes {
       flex-direction: column;
       align-items: flex-start;
       margin-bottom: 0;
+
+      @include respond(mobilemini) {
+        align-items: center;
+      }
 
       & .form-wrap__checkbox-wrap:not(:last-child) {
         margin-right: 0;
@@ -230,9 +289,19 @@
 
 .calc-form__wrap:not(:last-child) {
   margin-bottom: 5rem;
+
+  @include respond(tabdesk) {
+    margin-bottom: 2rem;
+  }
+
 }
 
 .calc-form__field {
+
+  @include respond(phone) {
+    width: 100%;
+  }
+
   & label {
     font-weight: 600;
     font-size: 18px;
@@ -243,6 +312,10 @@
   & .form-wrap__checkboxes .form-wrap__checkbox-mask {
     border: 1px solid #ffffff;
 
+    @include respond(tabdesk) {
+      margin-right: 2rem;
+    }
+
     &::before {
       background: #ffffff;
     }
@@ -252,9 +325,28 @@
     display: flex;
     align-items: center;
 
+    @include respond(tabdesk) {
+      flex-direction: column;
+    }
+
     & .form-wrap__checkbox-wrap {
       margin-bottom: 0;
       margin-right: 5rem;
+
+      @include respond(tabdesk) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+        max-width: 100px;
+        justify-content: space-between;
+      }
+
+      & .form-wrap__checkbox-text {
+        @include respond(tabdesk) {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
     }
   }
 }
