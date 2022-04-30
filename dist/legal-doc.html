@@ -23,23 +23,100 @@
         </svg>
       </a>
       <div class="header-page__content d-flex a-center">
+        <div class="header-page__mobile">
+          <a href="#" class="site-logo">
+            <svg class="icon" width="150" height="21">
+              <use xlink:href="./images/icons/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <svg class="icon" width="22" height="22" id="close-btn">
+            <use xlink:href="./images/icons/sprite.svg#close"></use>
+          </svg>
+        </div>
         <div class="header-page__item">
-          <ul class="top-menu d-flex a-center">
+          <ul class="top-menu d-flex a-center nav nav-tabs">
             <li class="top-menu__item">
-              <a href="#" class="top-menu__link">Продукты</a>
+              <a href="#home" class="top-menu__link active">Продукты</a>
+              <svg class="icon" width="8" height="8">
+                <use xlink:href="./images/icons/sprite.svg#back"></use>
+              </svg>
             </li>
             <li class="top-menu__item">
-              <a href="./about-company.html" class="top-menu__link">Компания</a>
+              <a href="#menu1" class="top-menu__link">Компания</a>
+              <svg class="icon" width="8" height="8">
+                <use xlink:href="./images/icons/sprite.svg#back"></use>
+              </svg>
             </li>
             <li class="top-menu__item">
-              <a href="./agents.html" class="top-menu__link">Агентам</a>
+              <a href="#menu2" class="top-menu__link">Агентам</a>
+              <svg class="icon" width="8" height="8">
+                <use xlink:href="./images/icons/sprite.svg#back"></use>
+              </svg>
             </li>
             <li class="top-menu__item">
-              <a href="#" class="top-menu__link">Инвесторам</a>
+              <a href="#menu3" class="top-menu__link">Инвесторам</a>
+              <svg class="icon" width="8" height="8">
+                <use xlink:href="./images/icons/sprite.svg#back"></use>
+              </svg>
             </li>
             <li class="top-menu__item">
               <a href="#" class="top-menu__link">Полезное</a>
+              <svg class="icon" width="8" height="8">
+                <use xlink:href="./images/icons/sprite.svg#back"></use>
+              </svg>
             </li>
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active show">
+                <ul class="drop-menu d-flex a-center">
+                  <li class="drop-menu__item">
+                    <a href="#" class="drop-menu__link">
+                      Государсвенные и коммерческие закупки
+                      <svg class="icon" width="8" height="8">
+                        <use xlink:href="./images/icons/sprite.svg#back"></use>
+                      </svg>
+                    </a>
+                    <div class="sub-menu">
+                      <ul class="sub-menu__list">
+                        <li class="sub-menu__item">
+                          <a href="./debt.html" class="sub-menu__link">Тендерный займ</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="./security.html" class="sub-menu__link">Банковская гарантия</a>
+                        </li>
+                        <li class="sub-menu__item">
+                          <a href="./contract-performance.html" class="sub-menu__link">Кредит на исполнение контракта</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="drop-menu__item">
+                    <a href="#" class="drop-menu__link">
+                      Займы под залог
+                      <svg class="icon" width="8" height="8">
+                        <use xlink:href="./images/icons/sprite.svg#back"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="drop-menu__item">
+                    <a href="#" class="drop-menu__link">
+                      Поставщикам маркетплейсов
+                      <svg class="icon" width="8" height="8">
+                        <use xlink:href="./images/icons/sprite.svg#back"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div id="menu1" class="tab-pane fade in">
+                2
+              </div>
+              <div id="menu2" class="tab-pane fade in">
+                3
+              </div>
+              <div id="menu3" class="tab-pane fade in">
+                4
+              </div>
+            </div>
           </ul>
         </div>
         <div class="header-page__item">
@@ -57,51 +134,13 @@
         </div>
       </div>
       <div class="header-page__hamburger">
-        <svg class="icon" width="20" height="20">
+        <svg class="icon" width="30" height="20">
           <use xlink:href="./images/icons/sprite.svg#hamburger"></use>
         </svg>
       </div>
     </div>
     <div class="header-page__drop">
-      <ul class="drop-menu d-flex a-center">
-        <li class="drop-menu__item">
-          <a href="#" class="drop-menu__link">
-            Государсвенные и коммерческие закупки
-            <svg class="icon" width="8" height="8">
-              <use xlink:href="./images/icons/sprite.svg#back"></use>
-            </svg>
-          </a>
-          <div class="sub-menu">
-            <ul class="sub-menu__list">
-              <li class="sub-menu__item">
-                <a href="./debt.html" class="sub-menu__link">Тендерный займ</a>
-              </li>
-              <li class="sub-menu__item">
-                <a href="./security.html" class="sub-menu__link">Банковская гарантия</a>
-              </li>
-              <li class="sub-menu__item">
-                <a href="./contract-performance.html" class="sub-menu__link">Кредит на исполнение контракта</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li class="drop-menu__item">
-          <a href="#" class="drop-menu__link">
-            Займы под залог
-            <svg class="icon" width="8" height="8">
-              <use xlink:href="./images/icons/sprite.svg#back"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="drop-menu__item">
-          <a href="#" class="drop-menu__link">
-            Поставщикам маркетплейсов
-            <svg class="icon" width="8" height="8">
-              <use xlink:href="./images/icons/sprite.svg#back"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      
     </div>
     </div>
   </header>
